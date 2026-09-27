@@ -1,0 +1,18 @@
+# Google Agent Development Kit (ADK) Configuration
+schema_version: "v1"
+agent:
+  name: "genesis-gemma4-developer-agent"
+  version: "1.0.0"
+  description: "Causal Reverse-Mindmap Navigation & Surgical AST Self-Healing Agent for Gemma 4"
+  entrypoint: "src.agent_core:Gemma4Agent"
+  tools:
+    - name: "locator"
+      path: "tools.locator:locate_root_cause"
+      description: "Harvests traceback symptoms and locates exact AST line spans."
+    - name: "patcher"
+      path: "tools.patcher:apply_surgical_patch"
+      description: "Applies relative-indented patch and verifies syntax via AST."
+  configs:
+    sampling: "configs/sampling.yaml"
+  prompts:
+    system: "prompts/system.md"

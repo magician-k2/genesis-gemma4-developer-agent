@@ -1,0 +1,7 @@
+# Gemma 4 LLM Sampling Parameters
+temperature: 0.1
+top_p: 0.95
+max_output_tokens: 4096
+stop_sequences:
+  - "<end_of_turn>"
+  - "<|im_end|>"
