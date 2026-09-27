@@ -12,9 +12,9 @@ GENESIS is a fully air-gapped, zero-dependency autonomous software engineering a
 
 ---
 
-## 🏛️ Scalable 15-Agent Autonomous Factory Architecture
+## 🏛️ Whiteboard-Exact 10-IDE Autonomous Swarm Architecture
 
-GENESIS introduces a decentralized, multi-agent orchestration architecture capable of scaling dynamically up to **15 concurrent IDE workers**:
+GENESIS coordinates a decentralized fleet of 10 specialized IDE workers orchestrated through Antigravity 2.0:
 
 ```
 [Any Device: Smartphone / Tablet / Workstation]
@@ -26,29 +26,24 @@ GENESIS introduces a decentralized, multi-agent orchestration architecture capab
    ┌───────────┬───────┴───────┬───────────┬───────────────┐
    ▼           ▼               ▼           ▼               ▼
 [IDE ①: ADK] [IDE ②: Core]  [IDE ③: Locate] [IDE ④: Patch] [IDE ⑤: Tests]
- (Manifest)  (Gemma 4 Loop) (Causal AST)    (Surgical Diff) (E2E Gate)
+ (Manifest)  (Conductor)     (Causal AST)    (Surgical Diff) (E2E Gate)
+   │           │               │           │               │
+   ├───────────┼───────────────┼───────────┼───────────────┤
+   ▼           ▼               ▼           ▼               ▼
+[IDE ⑥: Sec] [IDE ⑦: Perf]   [IDE ⑧: DAG]   [IDE ⑨: SNN]   [IDE ⑩: Drive/Merkle]
+ (Security)  (Profiler)      (Resolver)     (LIF Pruner)    (Knowledge Cache)
    │           │               │           │               │
    └───────────┴───────┬───────┴───────────┴───────────────┘
-                       │ (Active Baseline Verified)
-                       ▼
-    [Dynamic Swarm Expansion Slots: Up to 15 Agents]
-    ├─ [IDE ⑥: Security & Sandbox Auditor]
-    ├─ [IDE ⑦: Performance & Memory Profiler]
-    ├─ [IDE ⑧: Multi-File Dependency DAG Resolver]
-    ├─ [IDE ⑨: Context Pruning SNN Governor]
-    ├─ [IDE ⑩: Merkle Forensic Receipt Logger]
-    ├─ [IDE ⑪: Regression Prevention Oracle]
-    ├─ [IDE ⑫: Code Style & AST Lint Enforcer]
-    ├─ [IDE ⑬: Documentation & Docstring Sync]
-    ├─ [IDE ⑭: I18n Multilingual Error Localizer]
-    └─ [IDE ⑮: Drive Decoupled Knowledge Cache]
-                       │
+                       │ (All 10 Workers Deliver Verified Code)
                        ▼
    [Antigravity 2.0 Integration Gate: 100% Green Verified]
                        │
                        ▼
           [Google ADK Package: submission.zip]
             (100% Offline / Zero-Dependency)
+                       │
+                       ▼
+    [Google Drive Decoupled Knowledge Cache Managed by Gemma 4]
 ```
 
 ---
@@ -57,18 +52,24 @@ GENESIS introduces a decentralized, multi-agent orchestration architecture capab
 
 ```
 submission.zip
-├── agent.yaml          # Google ADK Root Agent Configuration
+├── agent.yaml                 # Google ADK Root Agent Configuration (10-IDE Swarm)
 ├── configs/
-│   └── sampling.yaml   # Gemma 4 LLM Sampling Hyperparameters
+│   └── sampling.yaml          # Gemma 4 LLM Sampling Hyperparameters
+├── knowledge_cache/           # Google Drive Decoupled Knowledge Sync
 ├── prompts/
-│   └── system.md       # Causal Reverse-Mindmap System Prompt
+│   └── system.md              # 10-IDE Reverse-Mindmap System Prompt
 ├── src/
-│   └── agent_core.py   # Autonomous Gemma 4 Inference Orchestrator
+│   └── agent_core.py          # Antigravity 2.0 Conductor Core Engine
 ├── tests/
-│   └── test_agent_suite.py # Real E2E Integration Test Suite
+│   └── test_agent_suite.py    # Full E2E Swarm Integration Test Suite
 └── tools/
-    ├── locator.py      # Causal Reverse-Mindmap AST Locator Tool
-    └── patcher.py      # Indent-Preserving Surgical Patcher Tool
+    ├── dag_resolver.py        # IDE ⑧: Multi-File Dependency DAG Resolver
+    ├── drive_merkle_manager.py# IDE ⑩: Google Drive & EU AI Act Merkle Manager
+    ├── locator.py             # IDE ③: Causal AST Locator Tool
+    ├── patcher.py             # IDE ④: Indent-Preserving Surgical Patcher
+    ├── perf_profiler.py       # IDE ⑦: Execution & Latency Profiler
+    ├── security_auditor.py    # IDE ⑥: AST Security & Sandbox Auditor
+    └── snn_pruner.py          # IDE ⑨: Euler LIF Neuromorphic SNN Pruner
 ```
 
 ---

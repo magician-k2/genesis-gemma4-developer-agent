@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Dict, Any
 
 def apply_surgical_patch(repo_dir: str, rel_file: str, target_line: int, error_type: str) -> Dict[str, Any]:
-    """Generates and applies a surgical diff patch preserving relative indentation."""
+    """Generates and applies a surgical diff patch preserving exact indentation."""
     abs_path = Path(repo_dir) / rel_file
     if not abs_path.exists():
         return {"success": False, "reason": "File not found"}
@@ -54,4 +54,9 @@ def apply_surgical_patch(repo_dir: str, rel_file: str, target_line: int, error_t
     )
     patch_str = "".join(diff)
 
-    return {"success": True, "patch": patch_str, "ast_audit": True}
+    return {
+        "success": True,
+        "patch": patch_str,
+        "patched_content": new_content,
+        "ast_audit": True
+    }

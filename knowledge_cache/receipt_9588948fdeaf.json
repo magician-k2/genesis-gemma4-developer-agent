@@ -1,0 +1,11 @@
+{
+  "merkle_root": "9588948fdeaf10313047e6a9d9a34e63c4dbf641772b126cfc16b64eb500f143",
+  "merkle_left": "cfad659707367592a0369e9630c82e72c0d0f46197a7c228cb2b1532a30b186d",
+  "patch_hash": "270cbcf81b501a376b9399a200d9d3534c8947707c367511dd157b95715ce482",
+  "target_file": "math_utils.py",
+  "metadata": {
+    "error_type": "ZeroDivisionError",
+    "dag_impact": []
+  },
+  "eu_ai_act_compliance": "Article 13 Transparency Guaranteed"
+}

@@ -2,16 +2,24 @@
 schema_version: "v1"
 agent:
   name: "genesis-gemma4-developer-agent"
-  version: "1.0.0"
-  description: "Causal Reverse-Mindmap Navigation & Surgical AST Self-Healing Agent for Gemma 4"
+  version: "2.0.0"
+  description: "Antigravity 2.0 Conductor with 10-IDE Swarm Orchestration for Gemma 4"
   entrypoint: "src.agent_core:Gemma4Agent"
-  tools:
+  subagents:
     - name: "locator"
-      path: "tools.locator:locate_root_cause"
-      description: "Harvests traceback symptoms and locates exact AST line spans."
+      path: "tools/locator.py"
     - name: "patcher"
-      path: "tools.patcher:apply_surgical_patch"
-      description: "Applies relative-indented patch and verifies syntax via AST."
+      path: "tools/patcher.py"
+    - name: "security"
+      path: "tools/security_auditor.py"
+    - name: "profiler"
+      path: "tools/perf_profiler.py"
+    - name: "dag_resolver"
+      path: "tools/dag_resolver.py"
+    - name: "snn_pruner"
+      path: "tools/snn_pruner.py"
+    - name: "drive_merkle"
+      path: "tools/drive_merkle_manager.py"
   configs:
     sampling: "configs/sampling.yaml"
   prompts:

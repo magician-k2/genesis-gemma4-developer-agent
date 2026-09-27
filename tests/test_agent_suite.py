@@ -6,7 +6,6 @@ import unittest
 import tempfile
 from pathlib import Path
 
-# Add parent to path
 PKG_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PKG_ROOT))
 
@@ -24,7 +23,7 @@ class TestGemma4DeveloperAgent(unittest.TestCase):
     def tearDown(self):
         self.temp_dir.cleanup()
 
-    def test_solve_zero_division(self):
+    def test_solve_zero_division_full_pipeline(self):
         agent = Gemma4Agent()
         desc = """Traceback (most recent call last):
   File "math_utils.py", line 2, in divide
@@ -34,6 +33,8 @@ ZeroDivisionError: division by zero"""
         self.assertEqual(result["status"], "RESOLVED")
         self.assertTrue(result["ast_audit"])
         self.assertIn("if b == 0:", result["patch"])
+        self.assertIsNotNone(result.get("merkle_root"))
+        self.assertTrue(result.get("drive_cache_synced"))
 
 if __name__ == "__main__":
     unittest.main()
